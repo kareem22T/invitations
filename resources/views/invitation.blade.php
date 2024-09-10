@@ -7,15 +7,15 @@
   <style>
     body {
 	font-family: sans-serif;
-	background-color: #000;
-	color: #fff;
+	background-color: #fff;
+	color: #000;
 	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
   }
-  
+
   .decline {
 	background-color: red;
   }
@@ -34,27 +34,27 @@
 	cursor: pointer;
 	transition: all 450ms ease-in-out;
   }
-  
+
   .sparkle {
 	fill: #AAAAAA;
 	transition: all 800ms ease;
   }
-  
+
   .text {
 	font-weight: 600;
 	color: #AAAAAA;
 	font-size: medium;
   }
-  
+
   .btn {
-	background: linear-gradient(0deg,#A47CF3,#683FEA);
+	background: linear-gradient(0deg,#4d2c1c, #bf7224);
 	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
 	inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
 	0px 0px 0px 4px rgba(255, 255, 255, 0.2),
-	0px 0px 180px 0px #9917FF;
+	0px 0px 180px 0px #bf7224;
 	transform: translateY(-2px);
   }
-  
+
   .btn.danger span {
 	color: white !important;
   }
@@ -62,22 +62,22 @@
 	fill: white !important;
   }
   .btn.danger {
-	background: linear-gradient(0deg,#fb5353,#f72727);
+	background: linear-gradient(0deg,#ededed,#6e6e6e);
 	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
 	inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
 	0px 0px 0px 4px rgba(255, 255, 255, 0.2),
-	0px 0px 180px 0px #ff1717;
+	0px 0px 180px 0px #bf7224;
 	transform: translateY(-2px);
   }
-  
+
   .btn:hover .text {
 	color: white;
   }
-  
+
   .btn:hover .sparkle {
 	fill: white;
 	transform: scale(1.2);
-  } 
+  }
   .card-body {
 	width: 100vw;
   }
@@ -85,8 +85,8 @@
 	width: 400px;
 	max-width: 85%;
 	margin: auto;
-	background: linear-gradient(#212121, #212121) padding-box,
-				linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+	background: linear-gradient(#ffffff, #ededed) padding-box,
+				linear-gradient(145deg, transparent 35%, #4d2c1c, #bf7224) border-box;
 	border: 2px solid transparent;
 	padding: 32px 24px;
 	font-size: 14px;
@@ -98,23 +98,23 @@
 	box-sizing: border-box;
 	border-radius: 16px;
   }
-  
+
   .form-container button:active {
 	scale: 0.95;
   }
-  
+
   .form-container .form {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
   }
-  
+
   .form-container .form-group {
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
   }
-  
+
   .form-container .form-group label {
 	display: block;
 	margin-bottom: 5px;
@@ -122,7 +122,7 @@
 	font-weight: 600;
 	font-size: 12px;
   }
-  
+
   .form-container .form-group input {
 	padding: 12px 16px;
 	border-radius: 8px;
@@ -136,7 +136,7 @@
 	display: flex;
 	gap: 1rem;
   }
-  
+
   .form-container .form-group textarea {
 	width: 100%;
 	padding: 12px 16px;
@@ -148,21 +148,21 @@
 	background-color: transparent;
 	font-family: inherit;
   }
-  
+
   .form-container .form-group input::placeholder {
 	opacity: 0.5;
   }
-  
+
   .form-container .form-group input:focus {
 	outline: none;
-	border-color: #e81cff;
+	border-color: #bf7224;
   }
-  
+
   .form-container .form-group textarea:focus {
 	outline: none;
-	border-color: #e81cff;
+	border-color: #bf7224;
   }
-  
+
   .form-container .form-submit-btn {
 	display: flex;
 	align-items: flex-start;
@@ -181,10 +181,23 @@
 	cursor: pointer;
 	border-radius: 6px;
   }
-  
+
   .form-container .form-submit-btn:hover {
 	background-color: #fff;
 	border-color: #fff;
+  }
+  .logos {
+    display: grid;
+    grid-template-columns: 150px 70px;
+    grid-template-rows: 90px;
+    gap: 20px;
+    justify-content: center
+  }
+
+  .logos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   </style>
 </head>
@@ -205,6 +218,10 @@
   <div class="invitation-card"  id="form_wrapper">
 
     <div class="card-header" style="text-align: center;">
+        <div class="logos">
+            <img src="{{asset('/sg-logo-1.png')}}" alt="">
+            <img src="{{asset('/Al_Ahly_SC_logo_23.svg.png')}}" alt="">
+        </div>
       <h1>You're Invited!</h1>
       <p>To a luxurious event you won't forget.</p>
     </div>
@@ -224,13 +241,13 @@
 					  <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
 						  <path fill="white" d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
 					  </svg>
-				  
+
 					  <span class="text" style="color: white;">Accept</span>
 				  </button>
 				  <button class="btn danger" onclick="vote(0)">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
 						<path fill="#aaaaaa" d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-6.489 5.8a1 1 0 0 0 -1.218 1.567l1.292 1.293l-1.292 1.293l-.083 .094a1 1 0 0 0 1.497 1.32l1.293 -1.292l1.293 1.292l.094 .083a1 1 0 0 0 1.32 -1.497l-1.292 -1.293l1.292 -1.293l.083 -.094a1 1 0 0 0 -1.497 -1.32l-1.293 1.292l-1.293 -1.292l-.094 -.083z" stroke-width="0" fill="currentColor" />
-					  </svg>				  
+					  </svg>
 					  <span class="text" style="color: #aaaaaa;">Decline</span>
 				  </button>
 			  </div>
